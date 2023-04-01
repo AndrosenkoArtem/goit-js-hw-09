@@ -61,3 +61,4 @@ function onSubmitForm(e) {
   }, refs.step[0].value);
 }
 refs.form.addEventListener('submit', onSubmitForm);
+//
