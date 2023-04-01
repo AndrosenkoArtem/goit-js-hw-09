@@ -49,13 +49,17 @@ function onSubmitForm(e) {
       .then(({ position, delay }) => {
         currentDelay += Number(refs.step[0].value);
         Notiflix.Notify.success(
-          `✅ Fulfilled promise ${position} in ${currentDelay - 500}ms`
+          `✅ Fulfilled promise ${position} in ${
+            currentDelay - Number(refs.step[0].value)
+          }ms`
         );
       })
       .catch(({ position, delay }) => {
         currentDelay += Number(refs.step[0].value);
         Notiflix.Notify.failure(
-          `❌ Rejected promise ${position} in ${currentDelay - 500}ms`
+          `❌ Rejected promise ${position} in ${
+            currentDelay - Number(refs.step[0].value)
+          }ms`
         );
       });
   }, refs.step[0].value);
