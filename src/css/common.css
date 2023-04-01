@@ -16,3 +16,21 @@ img {
   display: block;
   max-width: 100%;
 }
+
+[data-start] {
+  margin-top: 20%;
+  margin-left: 40%;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+}
+
+[data-stop] {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+}

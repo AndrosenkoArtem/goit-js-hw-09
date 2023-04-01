@@ -1,0 +1,27 @@
+[data-start],
+[data-clear] {
+  margin: 0px;
+  width: 60px;
+  height: 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: skyblue;
+}
+#datetime-picker {
+  border-radius: 20px;
+  border: 1px solid royalblue;
+  margin-left: 70px;
+}
+.timer {
+  display: flex;
+}
+.field:not(:last-child) {
+  margin-right: 20px;
+}
+body {
+  margin-left: 30%;
+}
+.not-active {
+  background-color: rgba(151, 161, 166, 0.575);
+}
