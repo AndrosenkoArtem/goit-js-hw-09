@@ -27,7 +27,7 @@ function onSubmitForm(e) {
   const amountInputValue = e.currentTarget.elements.amount.value;
   let currentPosition = 0;
   let currentDelay = Number(deleyInputValue);
-  if (isActive) {
+  if (isActive || deleyInputValue <= 0 || stepInputValue <= 0) {
     return;
   }
   isActive = true;
@@ -50,6 +50,7 @@ function onSubmitForm(e) {
         createPromiseFailed({ currentDelay, stepInputValue, position });
       });
   }, stepInputValue);
+  setTimeout(() => form.reset(), deleyInputValue);
 }
 function ifPromiseIntervalCompleted({
   promiseResultInterval,
